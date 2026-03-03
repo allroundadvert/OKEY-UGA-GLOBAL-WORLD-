@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OKEY UGA GLOBAL WORLD</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#0a0a0a;
+  color:#f5f5f5;
+}
+:root{--gold:#d4af37}
+
+/* HERO */
+.hero{
+  width:100%;
+  height:320px;
+  background:url('https://raw.githubusercontent.com/allroundadvert/IKEH-IKEH-DOORS-/9fa2858be11307f390e137948ab9a366568fd4c7/.github/workflows/1772529239762.png') center/cover no-repeat;
+  border-bottom:4px solid var(--gold);
+}
+
+/* INFO */
+.info{
+  text-align:center;
+  padding:30px 20px;
+}
+.info h2{color:var(--gold)}
+.info p{margin-top:8px}
+
+/* STATIC GALLERY */
+.gallery{
+  max-width:1100px;
+  margin:30px auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border:2px solid rgba(212,175,55,.6);
+  box-shadow:0 0 12px rgba(212,175,55,.25);
+}
+
+/* MOVING TWO IMAGES */
+.moving-wrap{
+  overflow:hidden;
+  max-width:1100px;
+  margin:40px auto;
+  border-top:1px solid rgba(212,175,55,.4);
+  border-bottom:1px solid rgba(212,175,55,.4);
+}
+.moving-track{
+  display:flex;
+  animation:slide 18s ease-in-out infinite alternate;
+}
+.moving-track img{
+  width:50vw;
+  max-width:520px;
+  height:260px;
+  object-fit:cover;
+  margin:10px;
+  border:2px solid var(--gold);
+}
+@keyframes slide{
+  from{transform:translateX(0)}
+  to{transform:translateX(-40%)}
+}
+
+/* FORM */
+.form-box{
+  max-width:800px;
+  margin:50px auto;
+  padding:30px;
+  border:1px solid rgba(212,175,55,.5);
+  background:#050505;
+}
+.form-box h2{
+  color:var(--gold);
+  text-align:center;
+  margin-bottom:15px;
+}
+label{
+  display:block;
+  margin-top:15px;
+  font-weight:600;
+}
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin-top:6px;
+  background:#0c0c0c;
+  border:1px solid #333;
+  color:#fff;
+}
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+button{
+  margin-top:25px;
+  width:100%;
+  padding:16px;
+  background:linear-gradient(90deg,#d4af37,#f1d27a);
+  border:none;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* MAP */
+.map iframe{
+  width:100%;
+  height:350px;
+  border:2px solid rgba(212,175,55,.4);
+}
+
+/* FLOATING BUTTONS */
+.whatsapp,.call,.tiktok{
+  position:fixed;
+  right:18px;
+  padding:14px 18px;
+  border-radius:40px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  z-index:999;
+}
+.whatsapp{bottom:90px;background:#25d366}
+.call{bottom:30px;background:#2563eb}
+.tiktok{bottom:150px;background:#ff0050}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero"></div>
+
+<div class="info">
+<h2>THE HOME OF CERAMIC TILES</h2>
+<p>Dealers and suppliers of building materials such as floor and wall tiles, granite, adhesive, and more.</p>
+<p>Address: Block D Shop 1 & 2, Building Materials Market by Bonsac Road, Asaba Benin Expressway, Asaba</p>
+<p>Branch: Shop 12a & 15b, Abuja Line Building Materials Market, Asaba</p>
+</div>
+
+<!-- STATIC IMAGES (placeholder, can replace with real images) -->
+<div class="gallery">
+<img src="https://via.placeholder.com/500x240?text=Material+1">
+<img src="https://via.placeholder.com/500x240?text=Material+2">
+<img src="https://via.placeholder.com/500x240?text=Material+3">
+<img src="https://via.placeholder.com/500x240?text=Material+4">
+</div>
+
+<!-- MOVING TWO IMAGES -->
+<div class="moving-wrap">
+<div class="moving-track">
+<img src="https://via.placeholder.com/520x260?text=Material+5">
+<img src="https://via.placeholder.com/520x260?text=Material+6">
+</div>
+</div>
+
+<!-- MAP -->
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Building+Materials+Market+Asaba&output=embed"></iframe>
+</div>
+
+<!-- FORM -->
+<div class="form-box">
+<h2>Order & Booking Form</h2>
+<form onsubmit="send();return false;">
+
+<label>Customer Name</label>
+<input id="customerName" placeholder="Full Name">
+
+<label>Phone Number</label>
+<input id="customerPhone" placeholder="Phone Number">
+
+<label>Customer Address</label>
+<input id="customerAddress" placeholder="Street / City / State">
+
+<label>Material Type</label>
+<select id="materialType">
+  <option>Tiles</option>
+  <option>Marble</option>
+  <option>Chemical</option>
+  <option>Plumbing Materials</option>
+  <option>Installation</option>
+  <option>Home Delivery</option>
+</select>
+
+<label>Tiles Origin (if Tiles selected)</label>
+<select id="tilesOrigin">
+  <option>Nigeria</option>
+  <option>India</option>
+  <option>Other</option>
+</select>
+
+<label>Bricks</label>
+<select id="bricks">
+  <option>South Africa</option>
+  <option>Nigeria</option>
+</select>
+
+<label>Specifications</label>
+<textarea id="specifications" placeholder="Size, color, design, quantity, special requests"></textarea>
+
+<button>Submit via WhatsApp</button>
+</form>
+</div>
+
+<footer>© 2026 OKEY UGA GLOBAL WORLD</footer>
+
+<a class="whatsapp" href="https://wa.me/2349126274516">WhatsApp</a>
+<a class="call" href="tel:09126274516">Call</a>
+<a class="tiktok" href="https://www.tiktok.com/@rambo_umeh1?_r=1&_t=ZS-94O0U2CkZOc">TikTok</a>
+
+<script>
+function send(){
+  const name = document.getElementById("customerName").value;
+  const phone = document.getElementById("customerPhone").value;
+  const address = document.getElementById("customerAddress").value;
+  const materialType = document.getElementById("materialType").value;
+  const tilesOrigin = document.getElementById("tilesOrigin").value;
+  const bricks = document.getElementById("bricks").value;
+  const specs = document.getElementById("specifications").value;
+
+  const msg = 
+`Name: ${name}
+Phone: ${phone}
+Address: ${address}
+Material Type: ${materialType}
+Tiles Origin: ${tilesOrigin}
+Bricks: ${bricks}
+Specifications: ${specs}`;
+
+  window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg), "_blank");
+}
+</script>
+
+</body>
+</html>
