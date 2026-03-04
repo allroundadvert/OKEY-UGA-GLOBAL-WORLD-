@@ -6,26 +6,24 @@
 <title>OKEY UGA GLOBAL WORLD</title>
 
 <style>
+:root{--gold:#d4af37}
+
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
   background:#0a0a0a;
   color:#f5f5f5;
 }
-:root{--gold:#d4af37}
 
-/* HERO */
+/* HEADER IMAGE */
 .hero{
-  width:100%;
-  padding:15px;
-  text-align:center;
   border-bottom:3px solid var(--gold);
+  padding:10px;
 }
 .hero img{
   width:100%;
-  height:auto;
   max-height:420px;
-  object-fit:contain;   /* FIX */
+  object-fit:contain;
 }
 
 /* INFO */
@@ -44,19 +42,19 @@ body{
 .moving-track{
   display:flex;
   gap:15px;
-  animation:slide 6s ease-in-out infinite alternate;
+  animation:move 5s linear infinite alternate;
 }
 .moving-track img{
-  width:80vw;
+  width:90vw;
   max-width:320px;
   height:auto;
-  object-fit:contain;  /* FIX */
+  object-fit:contain;
   border:2px solid var(--gold);
   background:#000;
 }
-@keyframes slide{
-  from{transform:translateX(-15%)}
-  to{transform:translateX(15%)}
+@keyframes move{
+  from{transform:translateX(-20%)}
+  to{transform:translateX(20%)}
 }
 
 /* STATIC GALLERY */
@@ -71,14 +69,14 @@ body{
 .gallery img{
   width:100%;
   height:auto;
-  object-fit:contain;   /* FIX */
+  object-fit:contain;
   border:2px solid rgba(212,175,55,.6);
   background:#000;
 }
 
 /* FORM */
 .form-box{
-  max-width:750px;
+  max-width:800px;
   margin:40px auto;
   padding:25px;
   border:1px solid rgba(212,175,55,.5);
@@ -90,7 +88,7 @@ body{
 }
 label{
   display:block;
-  margin-top:15px;
+  margin-top:14px;
   font-weight:600;
 }
 input,select,textarea{
@@ -101,9 +99,7 @@ input,select,textarea{
   border:1px solid #333;
   color:#fff;
 }
-textarea{
-  min-height:90px;
-}
+textarea{min-height:90px}
 button{
   margin-top:20px;
   width:100%;
@@ -122,7 +118,7 @@ button{
   border:2px solid rgba(212,175,55,.4);
 }
 
-/* FLOATING BUTTONS */
+/* FLOAT BUTTONS */
 .whatsapp,.call{
   position:fixed;
   right:18px;
@@ -150,7 +146,7 @@ footer{
 
 <body>
 
-<!-- HERO IMAGE -->
+<!-- HEADER IMAGE -->
 <div class="hero">
 <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/21960e9a0b0a8224cb936093fa55d2055178c71b/.github/workflows/Screenshot_20260303-185153.jpg">
 </div>
@@ -175,17 +171,75 @@ footer{
 <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125100.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125148.jpg">
 <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125317.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-130347.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250917-223143.jpg">
 </div>
 
-<!-- MAP -->
-<div class="map">
-<iframe src="https://www.google.com/maps?q=building+materials+market+asaba&output=embed"></iframe>
+<!-- ORDER FORM -->
+<div class="form-box">
+<h2>Customer Order & Booking</h2>
+<form onsubmit="send();return false;">
+
+<label>Customer Name</label>
+<input id="name" required>
+
+<label>Phone Number</label>
+<input id="phone" required>
+
+<label>Customer Address</label>
+<textarea id="address"></textarea>
+
+<label>Product Category</label>
+<select id="category">
+<option>Tiles</option>
+<option>Marble</option>
+<option>Chemicals</option>
+<option>Plumbing Materials</option>
+<option>Installation</option>
+</select>
+
+<label>Tiles Type</label>
+<select id="tiles">
+<option>Spanish Tiles</option>
+<option>China Tiles</option>
+<option>Nigeria Tiles</option>
+<option>Indian Tiles</option>
+</select>
+
+<label>Bricks</label>
+<select id="bricks">
+<option>South Africa</option>
+<option>Nigeria</option>
+</select>
+
+<label>Home Delivery</label>
+<select id="delivery">
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<button>Send via WhatsApp</button>
+</form>
 </div>
 
 <footer>© 2026 OKEY UGA GLOBAL WORLD</footer>
 
 <a class="whatsapp" href="https://wa.me/2349126274516">WhatsApp</a>
 <a class="call" href="tel:09126274516">Call</a>
+
+<script>
+function send(){
+const msg =
+`Customer Name: ${name.value}
+Phone: ${phone.value}
+Address: ${address.value}
+Category: ${category.value}
+Tiles: ${tiles.value}
+Bricks: ${bricks.value}
+Delivery: ${delivery.value}`;
+window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg),"_blank");
+}
+</script>
 
 </body>
 </html>
