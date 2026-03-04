@@ -11,74 +11,71 @@
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
-  background:#0a0a0a;
+  background:#000;
   color:#f5f5f5;
 }
 
 /* HEADER IMAGE */
 .hero{
-  border-bottom:3px solid var(--gold);
-  padding:10px;
-}
-.hero img{
   width:100%;
-  max-height:420px;
-  object-fit:contain;
+  height:280px;
+  background:url('https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/21960e9a0b0a8224cb936093fa55d2055178c71b/.github/workflows/Screenshot_20260303-185153.jpg') center/contain no-repeat;
+  background-color:#000;
+  border-bottom:3px solid var(--gold);
 }
 
 /* INFO */
 .info{
   text-align:center;
-  padding:25px 20px;
+  padding:30px 20px;
 }
-.info h2{color:var(--gold)}
+.info h1{color:var(--gold)}
+.info p{max-width:800px;margin:auto}
 
 /* MOVING IMAGES */
 .moving-wrap{
   overflow:hidden;
   max-width:1100px;
-  margin:20px auto;
+  margin:30px auto;
 }
 .moving-track{
   display:flex;
-  gap:15px;
-  animation:move 5s linear infinite alternate;
+  gap:20px;
+  animation:move 6s linear infinite alternate;
 }
 .moving-track img{
-  width:90vw;
-  max-width:320px;
-  height:auto;
+  width:300px;
+  height:220px;
   object-fit:contain;
-  border:2px solid var(--gold);
   background:#000;
+  border:2px solid var(--gold);
 }
 @keyframes move{
-  from{transform:translateX(-20%)}
-  to{transform:translateX(20%)}
+  from{transform:translateX(0)}
+  to{transform:translateX(-40%)}
 }
 
-/* STATIC GALLERY */
+/* GALLERY */
 .gallery{
   max-width:1100px;
-  margin:30px auto;
+  margin:40px auto;
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:15px;
-  padding:10px;
 }
 .gallery img{
   width:100%;
-  height:auto;
+  height:220px;
   object-fit:contain;
-  border:2px solid rgba(212,175,55,.6);
   background:#000;
+  border:1px solid rgba(212,175,55,.5);
 }
 
 /* FORM */
 .form-box{
   max-width:800px;
-  margin:40px auto;
-  padding:25px;
+  margin:50px auto;
+  padding:30px;
   border:1px solid rgba(212,175,55,.5);
   background:#050505;
 }
@@ -88,7 +85,7 @@ body{
 }
 label{
   display:block;
-  margin-top:14px;
+  margin-top:15px;
   font-weight:600;
 }
 input,select,textarea{
@@ -101,25 +98,18 @@ input,select,textarea{
 }
 textarea{min-height:90px}
 button{
-  margin-top:20px;
+  margin-top:25px;
   width:100%;
-  padding:15px;
+  padding:16px;
   background:linear-gradient(90deg,#d4af37,#f1d27a);
   border:none;
-  font-size:17px;
+  font-size:18px;
   font-weight:800;
   cursor:pointer;
 }
 
-/* MAP */
-.map iframe{
-  width:100%;
-  height:320px;
-  border:2px solid rgba(212,175,55,.4);
-}
-
 /* FLOAT BUTTONS */
-.whatsapp,.call{
+.whatsapp,.call,.tiktok{
   position:fixed;
   right:18px;
   padding:14px 18px;
@@ -127,70 +117,69 @@ button{
   color:#fff;
   text-decoration:none;
   font-weight:700;
+  z-index:999;
 }
-.whatsapp{bottom:90px;background:#25d366}
-.call{bottom:30px;background:#2563eb}
+.whatsapp{bottom:120px;background:#25d366}
+.call{bottom:60px;background:#2563eb}
+.tiktok{bottom:180px;background:#000;border:1px solid var(--gold)}
 
 footer{
   background:#000;
   text-align:center;
-  padding:18px;
+  padding:20px;
   color:#aaa;
-}
-
-@media(max-width:600px){
-  .gallery{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER IMAGE -->
-<div class="hero">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/21960e9a0b0a8224cb936093fa55d2055178c71b/.github/workflows/Screenshot_20260303-185153.jpg">
-</div>
+<div class="hero"></div>
 
 <div class="info">
-<h2>THE HOME OF CERAMIC TILES</h2>
-<p>Dealers & suppliers of tiles, granite, adhesive, plumbing materials & installation.</p>
+<h1>OKEY UGA GLOBAL WORLD</h1>
+<p><strong>THE HOME OF CERAMIC TILES</strong></p>
+<p>Dealers and suppliers of floor & wall tiles, granite, adhesive, plumbing materials, chemicals, bricks, and installations.</p>
+<p>
+<strong>Address:</strong><br>
+Block D shop 1 & 2, Building Materials Market, Bonsac Road, Asaba–Benin Expressway, Asaba.<br><br>
+<strong>Branch:</strong> Shop 12A & 15B, Abuja Line Building Materials Market, Asaba.
+</p>
 </div>
 
-<!-- MOVING 3 IMAGES -->
+<!-- MOVING IMAGES -->
 <div class="moving-wrap">
-<div class="moving-track">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124923.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124949.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125024.jpg">
-</div>
+  <div class="moving-track">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124923.jpg" loading="lazy" referrerpolicy="no-referrer">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124949.jpg" loading="lazy" referrerpolicy="no-referrer">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125024.jpg" loading="lazy" referrerpolicy="no-referrer">
+  </div>
 </div>
 
-<!-- STATIC IMAGES -->
+<!-- STATIC GALLERY -->
 <div class="gallery">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125050.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125100.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125148.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125317.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-130347.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250917-223143.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125050.jpg" loading="lazy" referrerpolicy="no-referrer">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125100.jpg" loading="lazy" referrerpolicy="no-referrer">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125148.jpg" loading="lazy" referrerpolicy="no-referrer">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250917-223143.jpg" loading="lazy" referrerpolicy="no-referrer">
 </div>
 
-<!-- ORDER FORM -->
+<!-- FORM -->
 <div class="form-box">
-<h2>Customer Order & Booking</h2>
-<form onsubmit="send();return false;">
+<h2>Customer Order Form</h2>
 
+<form onsubmit="sendWhatsApp();return false;">
 <label>Customer Name</label>
-<input id="name" required>
+<input id="custName" required>
 
 <label>Phone Number</label>
-<input id="phone" required>
+<input id="custPhone" required>
 
 <label>Customer Address</label>
-<textarea id="address"></textarea>
+<textarea id="custAddress"></textarea>
 
-<label>Product Category</label>
-<select id="category">
+<label>Select Service</label>
+<select id="service">
 <option>Tiles</option>
 <option>Marble</option>
 <option>Chemicals</option>
@@ -218,26 +207,32 @@ footer{
 <option>No</option>
 </select>
 
+<label>Specifications</label>
+<textarea id="specs" placeholder="Size, quantity, color, etc"></textarea>
+
 <button>Send via WhatsApp</button>
 </form>
 </div>
 
 <footer>© 2026 OKEY UGA GLOBAL WORLD</footer>
 
-<a class="whatsapp" href="https://wa.me/2349126274516">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/2349126274516" target="_blank">WhatsApp</a>
 <a class="call" href="tel:09126274516">Call</a>
+<a class="tiktok" href="https://www.tiktok.com/@rambo_umeh1?_r=1&_t=ZS-94O0U2CkZOc" target="_blank">TikTok</a>
 
 <script>
-function send(){
-const msg =
-`Customer Name: ${name.value}
-Phone: ${phone.value}
-Address: ${address.value}
-Category: ${category.value}
-Tiles: ${tiles.value}
-Bricks: ${bricks.value}
-Delivery: ${delivery.value}`;
-window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg),"_blank");
+function sendWhatsApp(){
+  const msg =
+`Customer Name: ${document.getElementById('custName').value}
+Phone: ${document.getElementById('custPhone').value}
+Address: ${document.getElementById('custAddress').value}
+Service: ${document.getElementById('service').value}
+Tiles: ${document.getElementById('tiles').value}
+Bricks: ${document.getElementById('bricks').value}
+Delivery: ${document.getElementById('delivery').value}
+Specifications: ${document.getElementById('specs').value}`;
+
+  window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg),"_blank");
 }
 </script>
 
