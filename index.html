@@ -6,235 +6,161 @@
 <title>OKEY UGA GLOBAL WORLD</title>
 
 <style>
-:root{--gold:#d4af37}
-
 body{
-  margin:0;
-  font-family:Segoe UI, Arial, sans-serif;
-  background:#0a0a0a;
-  color:#f5f5f5;
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
 }
 
-/* HERO */
-.hero{
-  width:100%;
-  height:320px;
-  background:url('https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/21960e9a0b0a8224cb936093fa55d2055178c71b/.github/workflows/Screenshot_20260303-185153.jpg') center/cover no-repeat;
-  border-bottom:4px solid var(--gold);
+/* HEADER */
+.header{
+    background:#1e1e1e;
+    color:white;
+    padding:15px;
+    text-align:center;
 }
-
-/* INFO */
-.info{
-  text-align:center;
-  padding:30px 20px;
+.header h1{
+    margin:5px 0;
+    font-size:22px;
 }
-.info h2{color:var(--gold)}
-.info p{margin-top:8px}
+.header p{
+    margin:0;
+    font-size:14px;
+}
 
 /* MOVING IMAGES */
-.moving-wrapper{
-  overflow:hidden;
-  max-width:1200px;
-  margin:30px auto;
-}
-.moving-track{
-  display:flex;
-  gap:15px;
-}
-.move-left{
-  animation:moveLeft 20s linear infinite;
-}
-.move-right{
-  animation:moveRight 22s linear infinite;
-}
-.moving-track img{
-  width:260px;
-  height:180px;
-  object-fit:cover;
-  border:2px solid var(--gold);
+.slider-wrapper{
+    overflow:hidden;
+    background:#000;
+    padding:10px 0;
 }
 
-@keyframes moveLeft{
-  from{transform:translateX(-100%)}
-  to{transform:translateX(100%)}
-}
-@keyframes moveRight{
-  from{transform:translateX(100%)}
-  to{transform:translateX(-100%)}
+.slider{
+    display:flex;
+    gap:10px;
+    animation: slideLR 6s infinite alternate linear;
 }
 
-/* STATIC GRID */
+.slider img{
+    width:90%;
+    max-width:320px;
+    border-radius:8px;
+}
+
+/* Faster left-right movement */
+@keyframes slideLR{
+    from{ transform: translateX(-15%); }
+    to{ transform: translateX(15%); }
+}
+
+/* STATIC IMAGE GRID */
 .gallery{
-  max-width:1100px;
-  margin:40px auto;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:10px;
 }
+
 .gallery img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border:2px solid rgba(212,175,55,.6);
+    width:48%;
+    border-radius:8px;
+    background:#ddd;
 }
 
-/* FORM */
-.form-box{
-  max-width:800px;
-  margin:50px auto;
-  padding:30px;
-  border:1px solid rgba(212,175,55,.5);
-  background:#050505;
-}
-.form-box h2{
-  color:var(--gold);
-  text-align:center;
-}
-label{
-  display:block;
-  margin-top:15px;
-  font-weight:600;
-}
-input,select,textarea{
-  width:100%;
-  padding:12px;
-  margin-top:6px;
-  background:#0c0c0c;
-  border:1px solid #333;
-  color:#fff;
-}
-textarea{min-height:100px}
-button{
-  margin-top:25px;
-  width:100%;
-  padding:16px;
-  background:linear-gradient(90deg,#d4af37,#f1d27a);
-  border:none;
-  font-weight:800;
-  cursor:pointer;
+/* TEXT SECTION */
+.content{
+    padding:15px;
+    background:white;
 }
 
-/* MAP */
-.map iframe{
-  width:100%;
-  height:350px;
-  border:2px solid rgba(212,175,55,.4);
+.content h2{
+    margin-top:0;
+    font-size:20px;
 }
 
-/* FLOATING BUTTONS */
-.whatsapp,.call,.tiktok{
-  position:fixed;
-  right:18px;
-  padding:14px 18px;
-  border-radius:40px;
-  color:#fff;
-  font-weight:700;
-  text-decoration:none;
-  z-index:999;
+.content p{
+    font-size:14px;
+    line-height:1.5;
 }
-.whatsapp{bottom:90px;background:#25d366}
-.call{bottom:30px;background:#2563eb}
-.tiktok{bottom:150px;background:#ff0050}
 
-footer{
-  background:#000;
-  text-align:center;
-  padding:20px;
-  color:#aaa;
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:10px;
+    padding:15px;
+}
+
+.buttons a{
+    flex:1;
+    text-align:center;
+    padding:12px;
+    text-decoration:none;
+    color:white;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.call{ background:green; }
+.whatsapp{ background:#25D366; }
+.tiktok{ background:black; }
+
+@media(min-width:768px){
+    .gallery img{
+        width:32%;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero"></div>
-
-<div class="info">
-<h2>THE HOME OF CERAMIC TILES</h2>
-<p>Dealers and suppliers of building materials such as floor and wall tiles, granite, adhesive, and more.</p>
-<p>Block D Shop 1 & 2, Building Materials Market, Bonsac Road, Asaba</p>
-<p>Branch: Shop 12A & 15B, Abuja Line Building Materials Market, Asaba</p>
+<!-- HEADER -->
+<div class="header">
+    <h1>OKEY UGA GLOBAL WORLD</h1>
+    <p>THE HOME OF CERAMIC TILES</p>
 </div>
 
-<!-- MOVING IMAGES -->
-<div class="moving-wrapper">
-  <div class="moving-track move-left">
-    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124923.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124949.jpg">
-    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125024.jpg">
-  </div>
-  <div class="moving-track move-right">
-    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125050.jpg">
-  </div>
+<!-- MOVING TOP IMAGES (ONLY 3) -->
+<div class="slider-wrapper">
+    <div class="slider">
+        <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124923.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124949.jpg">
+        <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125024.jpg">
+    </div>
 </div>
 
-<!-- STATIC IMAGES -->
+<!-- WRITE UP -->
+<div class="content">
+    <h2>About Us</h2>
+    <p>
+        Dealers and suppliers of building materials such as floor and wall tiles,
+        granite, adhesive, plumbing materials, chemicals, installations, and home delivery.
+    </p>
+    <p>
+        <strong>Address:</strong> Block D shop 1 & 2 Building Materials Market, Bonsac Road,
+        Asaba–Benin Expressway, Asaba.
+    </p>
+    <p>
+        <strong>Branch:</strong> Shop 12A & 15B Abuja Line Building Materials Market, Asaba.
+    </p>
+</div>
+
+<!-- STATIC IMAGE GALLERY -->
 <div class="gallery">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125100.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125148.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125317.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125347.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125410.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125516.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125605.jpg">
-<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125640.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125050.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125100.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125148.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125317.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125347.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125410.jpg">
 </div>
 
-<!-- MAP -->
-<div class="map">
-<iframe src="https://www.google.com/maps?q=Building+Materials+Market+Asaba&output=embed"></iframe>
+<!-- BUTTONS -->
+<div class="buttons">
+    <a class="call" href="tel:09126274516">CALL</a>
+    <a class="whatsapp" href="https://wa.me/2349126274516">WHATSAPP</a>
+    <a class="tiktok" href="https://www.tiktok.com/@rambo_umeh1">TIKTOK</a>
 </div>
-
-<!-- FORM -->
-<div class="form-box">
-<h2>Order Form</h2>
-<form onsubmit="send();return false;">
-<label>Name</label><input id="name">
-<label>Phone</label><input id="phone">
-<label>Address</label><input id="address">
-
-<label>Material</label>
-<select id="material">
-<option>Tiles</option>
-<option>Marble</option>
-<option>Chemicals</option>
-<option>Plumbing</option>
-<option>Installation</option>
-<option>Home Delivery</option>
-</select>
-
-<label>Tiles Type</label>
-<select id="tiles">
-<option>Spanish Tiles</option>
-<option>China</option>
-<option>Nigeria</option>
-<option>Indian Tiles</option>
-</select>
-
-<label>Specifications</label>
-<textarea id="specs"></textarea>
-
-<button>Send via WhatsApp</button>
-</form>
-</div>
-
-<footer>© 2026 OKEY UGA GLOBAL WORLD</footer>
-
-<a class="whatsapp" href="https://wa.me/2349126274516">WhatsApp</a>
-<a class="call" href="tel:09126274516">Call</a>
-<a class="tiktok" href="https://www.tiktok.com/@rambo_umeh1?_r=1&_t=ZS-94O0U2CkZOc">TikTok</a>
-
-<script>
-function send(){
-const msg=`Name: ${name.value}
-Phone: ${phone.value}
-Address: ${address.value}
-Material: ${material.value}
-Tiles: ${tiles.value}
-Specs: ${specs.value}`;
-window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg));
-}
-</script>
 
 </body>
 </html>
