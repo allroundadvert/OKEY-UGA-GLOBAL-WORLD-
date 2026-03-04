@@ -6,13 +6,14 @@
 <title>OKEY UGA GLOBAL WORLD</title>
 
 <style>
+:root{--gold:#d4af37}
+
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
   background:#0a0a0a;
   color:#f5f5f5;
 }
-:root{--gold:#d4af37}
 
 /* HERO */
 .hero{
@@ -30,6 +31,53 @@ body{
 .info h2{color:var(--gold)}
 .info p{margin-top:8px}
 
+/* MOVING IMAGES */
+.moving-wrapper{
+  overflow:hidden;
+  max-width:1200px;
+  margin:30px auto;
+}
+.moving-track{
+  display:flex;
+  gap:15px;
+}
+.move-left{
+  animation:moveLeft 20s linear infinite;
+}
+.move-right{
+  animation:moveRight 22s linear infinite;
+}
+.moving-track img{
+  width:260px;
+  height:180px;
+  object-fit:cover;
+  border:2px solid var(--gold);
+}
+
+@keyframes moveLeft{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(100%)}
+}
+@keyframes moveRight{
+  from{transform:translateX(100%)}
+  to{transform:translateX(-100%)}
+}
+
+/* STATIC GRID */
+.gallery{
+  max-width:1100px;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border:2px solid rgba(212,175,55,.6);
+}
+
 /* FORM */
 .form-box{
   max-width:800px;
@@ -41,7 +89,6 @@ body{
 .form-box h2{
   color:var(--gold);
   text-align:center;
-  margin-bottom:15px;
 }
 label{
   display:block;
@@ -56,17 +103,13 @@ input,select,textarea{
   border:1px solid #333;
   color:#fff;
 }
-textarea{
-  min-height:100px;
-  resize:vertical;
-}
+textarea{min-height:100px}
 button{
   margin-top:25px;
   width:100%;
   padding:16px;
   background:linear-gradient(90deg,#d4af37,#f1d27a);
   border:none;
-  font-size:18px;
   font-weight:800;
   cursor:pointer;
 }
@@ -85,8 +128,8 @@ button{
   padding:14px 18px;
   border-radius:40px;
   color:#fff;
-  text-decoration:none;
   font-weight:700;
+  text-decoration:none;
   z-index:999;
 }
 .whatsapp{bottom:90px;background:#25d366}
@@ -109,8 +152,32 @@ footer{
 <div class="info">
 <h2>THE HOME OF CERAMIC TILES</h2>
 <p>Dealers and suppliers of building materials such as floor and wall tiles, granite, adhesive, and more.</p>
-<p>Address: Block D Shop 1 & 2, Building Materials Market by Bonsac Road, Asaba Benin Expressway, Asaba</p>
-<p>Branch: Shop 12a & 15b, Abuja Line Building Materials Market, Asaba</p>
+<p>Block D Shop 1 & 2, Building Materials Market, Bonsac Road, Asaba</p>
+<p>Branch: Shop 12A & 15B, Abuja Line Building Materials Market, Asaba</p>
+</div>
+
+<!-- MOVING IMAGES -->
+<div class="moving-wrapper">
+  <div class="moving-track move-left">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124923.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-124949.jpg">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125024.jpg">
+  </div>
+  <div class="moving-track move-right">
+    <img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125050.jpg">
+  </div>
+</div>
+
+<!-- STATIC IMAGES -->
+<div class="gallery">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125100.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125148.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125317.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125347.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125410.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125516.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125605.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/OKEY-UGA-GLOBAL-WORLD-/423dad821a67eb347afc3e75fc60c0fb33796df8/Screenshot_20250807-125640.jpg">
 </div>
 
 <!-- MAP -->
@@ -120,46 +187,34 @@ footer{
 
 <!-- FORM -->
 <div class="form-box">
-<h2>Order & Booking Form</h2>
+<h2>Order Form</h2>
 <form onsubmit="send();return false;">
+<label>Name</label><input id="name">
+<label>Phone</label><input id="phone">
+<label>Address</label><input id="address">
 
-<label>Customer Name</label>
-<input id="customerName" placeholder="Full Name">
-
-<label>Phone Number</label>
-<input id="customerPhone" placeholder="Phone Number">
-
-<label>Customer Address</label>
-<input id="customerAddress" placeholder="Street / City / State">
-
-<label>Material Type</label>
-<select id="materialType">
-  <option>Tiles</option>
-  <option>Marble</option>
-  <option>Chemical</option>
-  <option>Plumbing Materials</option>
-  <option>Installation</option>
-  <option>Home Delivery</option>
+<label>Material</label>
+<select id="material">
+<option>Tiles</option>
+<option>Marble</option>
+<option>Chemicals</option>
+<option>Plumbing</option>
+<option>Installation</option>
+<option>Home Delivery</option>
 </select>
 
-<label>Tiles Options (if Tiles selected)</label>
-<select id="tilesType">
-  <option>Spanish Tiles</option>
-  <option>China</option>
-  <option>Nigeria</option>
-  <option>Indian Tiles</option>
-</select>
-
-<label>Bricks</label>
-<select id="bricks">
-  <option>South Africa</option>
-  <option>Nigeria</option>
+<label>Tiles Type</label>
+<select id="tiles">
+<option>Spanish Tiles</option>
+<option>China</option>
+<option>Nigeria</option>
+<option>Indian Tiles</option>
 </select>
 
 <label>Specifications</label>
-<textarea id="specifications" placeholder="Size, color, design, quantity, special requests"></textarea>
+<textarea id="specs"></textarea>
 
-<button>Submit via WhatsApp</button>
+<button>Send via WhatsApp</button>
 </form>
 </div>
 
@@ -171,24 +226,13 @@ footer{
 
 <script>
 function send(){
-  const name = document.getElementById("customerName").value;
-  const phone = document.getElementById("customerPhone").value;
-  const address = document.getElementById("customerAddress").value;
-  const materialType = document.getElementById("materialType").value;
-  const tilesType = document.getElementById("tilesType").value;
-  const bricks = document.getElementById("bricks").value;
-  const specs = document.getElementById("specifications").value;
-
-  const msg = 
-`Name: ${name}
-Phone: ${phone}
-Address: ${address}
-Material Type: ${materialType}
-Tiles Type: ${tilesType}
-Bricks: ${bricks}
-Specifications: ${specs}`;
-
-  window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg), "_blank");
+const msg=`Name: ${name.value}
+Phone: ${phone.value}
+Address: ${address.value}
+Material: ${material.value}
+Tiles: ${tiles.value}
+Specs: ${specs.value}`;
+window.open("https://wa.me/2349126274516?text="+encodeURIComponent(msg));
 }
 </script>
 
